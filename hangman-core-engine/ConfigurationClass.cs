@@ -2,19 +2,19 @@
 {
     public class ConfigurationClass
     {
-        private string _dataFileFullPath;
+        string _dataFileFullPath;
 
         public ConfigurationClass()
         {
-            
+            _dataFileFullPath = "";
         }
 
         public void SetFilePath(string DataFileFullPath)
         {
-            _dataFileFullPath =  DataFileFullPath;
+            _dataFileFullPath = DataFileFullPath;
         }
 
-        public string GetFilePath(string DataFileFullPath)
+        public string GetFilePath()
         {
             return _dataFileFullPath;
         }

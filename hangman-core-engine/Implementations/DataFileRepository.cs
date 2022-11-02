@@ -11,11 +11,12 @@ namespace hangman_core_engine.Implementations
     {
         private readonly IFileOperationsManager m_FileOperationsManager;
         private readonly string m_DataFileFullPath;
+        ConfigurationClass configurations = new();
 
         public DataFileRepository(IFileOperationsManager fileOperationsManager, string dataFileFullPath)
         {
             m_FileOperationsManager = fileOperationsManager;
-            m_DataFileFullPath = dataFileFullPath;
+            m_DataFileFullPath = configurations.GetFilePath();
         }
 
         public IEnumerable<string> GetAllFileData()
